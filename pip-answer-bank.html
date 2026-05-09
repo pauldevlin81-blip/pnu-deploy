@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NI PIP Answer Bank — 136 Worked Example Answers for the DfC Form | NI Benefits Navigator</title>
+<meta name="description" content="The NI PIP Answer Bank — 136 worked example answers for every PIP activity. Written for DfC, not DWP. Plain English. Reliability rule explained. £24.99 instant PDF download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<script src="/cookie-consent-banner.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0D1B2A;
+  --navy: #122238;
+  --navy2: #1A3050;
+  --panel: #1E3A5F;
+  --border: #2A4E78;
+  --amber: #E8A84C;
+  --amber2: #F5C878;
+  --teal: #3DBDAA;
+  --teal2: #5DCFBC;
+  --cream: #F7F2EB;
+  --mist: #B8C8D8;
+  --fog: #5A7A94;
+  --salmon: #E87B6A;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+
+/* ── Noise overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: .5;
+}
+
+/* ── Utility ── */
+.container { max-width: 760px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::after { content: ''; flex: 0 0 32px; height: 1px; background: var(--teal); opacity: .5; }
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.section-heading em { color: var(--amber); font-style: italic; }
+.section-lead {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--mist);
+  max-width: 580px;
+  margin-bottom: 40px;
+}
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--amber), var(--amber2));
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 36px;
+  border: none;
+  cursor: pointer;
+  transition: all .28s;
+  box-shadow: 0 0 28px rgba(232,168,76,.2);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 40px rgba(232,168,76,.35); }
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding: 14px 32px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all .25s;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ── Sticky header ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 27, 42, .96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-lockup { display: flex; align-items: center; gap: 10px; }
+.logo-lockup svg { flex-shrink: 0; }
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--amber);
+  line-height: 1;
+}
+.logo-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 7.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--fog);
+  margin-top: 2px;
+}
+.header-cta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  background: rgba(232,168,76,.1);
+  border: 1px solid rgba(232,168,76,.3);
+  color: var(--amber);
+  cursor: pointer;
+  transition: all .2s;
+}
+.header-cta:hover { background: rgba(232,168,76,.2); }
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 40%, rgba(232,168,76,.08), transparent 55%),
+    radial-gradient(ellipse 60% 80% at 85% 20%, rgba(61,189,170,.06), transparent 50%),
+    linear-gradient(160deg, var(--ink) 0%, var(--navy) 60%, var(--ink) 100%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; max-width: 640px; }
+.hero-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-kicker::before { content: ''; width: 32px; height: 1px; background: var(--teal); }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5.5vw, 56px);
+  font-weight: 900;
+  line-height: 1.08;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.hero h1 em { color: var(--amber); font-style: italic; }
+.hero-lead {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--mist);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-proof { display: flex; gap: 36px; align-items: center; flex-wrap: wrap; }
+.proof-stat { text-align: left; }
+.proof-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--amber);
+  line-height: 1;
+}
+.proof-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fog);
+  margin-top: 3px;
+}
+.proof-divider { width: 1px; height: 36px; background: var(--border); }
+
+/* ── Trust bar ── */
+.trust-bar {
+  background: var(--navy);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+}
+.trust-items {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fog);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.trust-item .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  opacity: .6;
+  flex-shrink: 0;
+}
+
+/* ── Timeline section ── */
+.timeline {
+  padding: 100px 0 80px;
+}
+.timeline-track {
+  position: relative;
+  padding-left: 36px;
+  margin-top: 8px;
+}
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--amber), var(--teal), var(--salmon));
+  opacity: .4;
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 36px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--amber);
+  background: var(--ink);
+}
+.timeline-item.danger::before { border-color: var(--salmon); }
+.timeline-item.teal::before { border-color: var(--teal); }
+.timeline-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.timeline-item.danger .timeline-label { color: var(--salmon); }
+.timeline-item.teal .timeline-label { color: var(--teal); }
+.timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.timeline-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--mist);
+  max-width: 540px;
+}
+
+/* ── Problem cards ── */
+.problems { padding: 100px 0 80px; }
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.problem-card {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  padding: 28px 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.problem-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.problem-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--mist);
+}
+.problem-text strong { color: var(--cream); font-weight: 500; }
+
+/* ── NI specificity ── */
+.ni-specific { padding: 100px 0 80px; }
+.ni-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+.ni-card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  background: var(--navy);
+}
+.ni-card-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+.ni-card-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.ni-card-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--fog);
+}
+
+/* ── Products ── */
+.products { padding: 100px 0 80px; }
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.product-card {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.product-card.featured { border-color: var(--amber); }
+.product-card.featured::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--amber);
+  opacity: .3;
+  pointer-events: none;
+  box-shadow: 0 0 40px rgba(232,168,76,.08) inset;
+}
+.product-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--amber);
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.product-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--mist);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.product-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--amber);
+  margin-bottom: 20px;
+}
+.product-price span {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--fog);
+  text-transform: uppercase;
+  margin-left: 8px;
+  font-weight: 400;
+}
+.product-features { margin-bottom: 24px; }
+.product-feature {
+  font-size: 15px;
+  color: var(--mist);
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(42,78,120,.3);
+  padding-left: 16px;
+  position: relative;
+}
+.product-feature::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  opacity: .6;
+}
+.product-btn {
+  display: block;
+  text-align: center;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--amber), var(--amber2));
+  color: var(--ink);
+  transition: all .25s;
+}
+.product-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 24px rgba(232,168,76,.3); }
+.product-btn.ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid var(--border);
+}
+.product-btn.ghost:hover { border-color: var(--amber); color: var(--amber); transform: none; box-shadow: none; }
+.bundle-cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ── Objections ── */
+.objections { padding: 100px 0 80px; }
+.objection-card {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+  margin-bottom: 16px;
+}
+.objection-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--salmon);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.objection-a {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mist);
+}
+
+/* ── FAQ ── */
+.faq { padding: 100px 0 80px; }
+.faq-list { max-width: 760px; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-q {
+  padding: 20px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cream);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color .2s;
+}
+.faq-q:hover { color: var(--amber); }
+.faq-q .icon {
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  color: var(--fog);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.faq-a-inner {
+  padding: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mist);
+}
+.faq-a-inner strong { color: var(--cream); font-weight: 500; }
+.faq-item.open .faq-a { max-height: 400px; }
+.faq-item.open .faq-q .icon { transform: rotate(45deg); }
+
+/* ── Testimonial ── */
+.testimonial-pull {
+  padding: 80px 0;
+  text-align: center;
+}
+.testimonial-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 3.5vw, 28px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  max-width: 580px;
+  margin: 0 auto 16px;
+  font-style: italic;
+}
+.testimonial-quote em { color: var(--amber); }
+.testimonial-attr {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fog);
+}
+
+/* ── Final CTA ── */
+.final-cta {
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.final-cta-lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--mist);
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+/* ── Advice strip ── */
+.advice-strip {
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.advice-strip p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--fog);
+  max-width: 580px;
+  margin: 0 auto;
+}
+.advice-strip a { color: var(--teal); text-decoration: underline; }
+
+/* ── Footer ── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+}
+.footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--amber);
+  margin-bottom: 4px;
+}
+.footer-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fog);
+}
+.footer-legal {
+  font-size: 11px;
+  color: var(--fog);
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hero { min-height: auto; padding: 60px 0 40px; }
+  .hero h1 { font-size: 30px; }
+  .hero-proof { gap: 20px; }
+  .proof-divider { display: none; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .ni-grid { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr; }
+  .header-cta { display: none; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-ghost { width: 100%; }
+  .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
+  .footer-legal { text-align: center; }
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  opacity: 0;
+  animation: fadeUp .6s ease forwards;
+}
+.delay-1 { animation-delay: .1s; }
+.delay-2 { animation-delay: .2s; }
+.delay-3 { animation-delay: .3s; }
+.delay-4 { animation-delay: .4s; }
+
+/* ── Reach bar (Meta insights social proof) ── */
+.reach-bar {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
+  padding: 48px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.reach-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.reach-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+.reach-lead {
+  font-family: 'Playfair Display', serif;
+  color: var(--cream);
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+.reach-lead em { color: var(--amber); font-style: italic; }
+.reach-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 36px 56px;
+}
+.reach-stat { text-align: center; }
+.reach-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.reach-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+@media (max-width: 640px) {
+  .reach-stats { gap: 24px 32px; }
+  .reach-num { font-size: 26px; }
+  .reach-lead { font-size: 17px; }
+}
+
+/* ── MR callout band ── */
+.mr-band {
+  background: linear-gradient(135deg, rgba(232,123,106,.08), rgba(30,58,95,.4));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 56px 0;
+  position: relative;
+  z-index: 1;
+}
+.mr-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mr-content { flex: 1 1 540px; }
+.mr-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--salmon);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.mr-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.mr-heading em { color: var(--salmon); font-style: italic; }
+.mr-lead {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--mist);
+  max-width: 580px;
+}
+.mr-cta { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .mr-band { padding: 40px 0; }
+  .mr-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .mr-cta { width: 100%; text-align: center; }
+}
+</style>
+<script src="/posthog-nibn.js" defer></script>
+<script src="/utm-capture.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="https://nibenefitsnavigator.com" class="logo-lockup">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="14" stroke="#E8A84C" stroke-width="1.5" opacity=".5"/>
+      <path d="M16 4 L18 14 L16 16 L14 14 Z" fill="#E8A84C"/>
+      <path d="M16 28 L14 18 L16 16 L18 18 Z" fill="#5A7A94" opacity=".6"/>
+      <circle cx="16" cy="16" r="2" fill="#E8A84C"/>
+    </svg>
+    <div>
+      <div class="logo-text">NI Benefits Navigator</div>
+      <div class="logo-sub">Northern Ireland's Benefits Guides</div>
+    </div>
+  </a>
+  <a href="#free-guide" class="header-cta">Free Guide &darr;</a>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-kicker animate-in">Adult PIP &middot; Northern Ireland &middot; DfC</div>
+      <h1 class="animate-in delay-1">The PIP form has 12 activities. The Answer Bank has <em>136 worked example answers.</em></h1>
+      <p class="hero-lead animate-in delay-2">For people filling in the form for the first time, preparing for a Capita telephone assessment, or writing a Mandatory Reconsideration after a wrong decision. The form asks about your worst day in language that sounds like your best day. The Answer Bank is 136 example answers, written for the DfC version, in plain English, with the reliability rule explained the way it actually works.</p>
+      <div class="hero-buttons animate-in delay-3">
+        <a href="#product" class="btn-primary">See what&rsquo;s inside &rarr;</a>
+        <a href="#free-guide" class="btn-ghost">Free PIP guide first</a>
+      </div>
+      <div class="hero-proof animate-in delay-4">
+        <div>
+          <div class="proof-num">2,500+</div>
+          <div class="proof-label">NI families helped</div>
+        </div>
+        <div>
+          <div class="proof-num">120+</div>
+          <div class="proof-label">paid guides sold</div>
+        </div>
+        <div>
+          <div class="proof-num">10,800+</div>
+          <div class="proof-label">Facebook followers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-items">
+    <div class="trust-item"><span class="dot"></span>DfC form, not DWP</div>
+    <div class="trust-item"><span class="dot"></span>NI rates &amp; HSC terminology</div>
+    <div class="trust-item"><span class="dot"></span>Capita telephone assessment</div>
+    <div class="trust-item"><span class="dot"></span>Instant PDF download</div>
+    <div class="trust-item"><span class="dot"></span>Written by an NI claimant</div>
+  </div>
+</div>
+
+<!-- REACH BAR -->
+<div class="reach-bar">
+  <div class="reach-inner">
+    <div class="reach-eyebrow">28-day Facebook reach</div>
+    <p class="reach-lead">Reaching Northern Ireland claimants <em>everywhere</em> &mdash; growing fast, with most viewers landing here before they follow.</p>
+    <div class="reach-stats">
+      <div class="reach-stat">
+        <div class="reach-num">3.3M</div>
+        <div class="reach-label">Post views / 28 days</div>
+      </div>
+      <div class="reach-stat">
+        <div class="reach-num">34,800</div>
+        <div class="reach-label">Unique viewers / 28 days</div>
+      </div>
+      <div class="reach-stat">
+        <div class="reach-num">10,822</div>
+        <div class="reach-label">Total followers</div>
+      </div>
+      <div class="reach-stat">
+        <div class="reach-num">+9,564</div>
+        <div class="reach-label">New follows / 90 days</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEMS -->
+<section class="problems">
+  <div class="container">
+    <div class="eyebrow">If any of this sounds familiar</div>
+    <h2 class="section-heading">The PIP form does <em>this</em> to people</h2>
+    <p class="section-lead">Most people who struggle with the form aren&rsquo;t struggling because their condition isn&rsquo;t severe enough. They&rsquo;re struggling because the form is asking about their worst day in language that sounds neutral &mdash; and they keep answering as if it&rsquo;s a normal day.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <div class="problem-title">You describe what you can do</div>
+        <div class="problem-text">The form asks &ldquo;can you wash and bathe?&rdquo; You answer &ldquo;yes&rdquo; because technically you can &mdash; some days. The form isn&rsquo;t asking about some days. It&rsquo;s asking whether you can do it <strong>safely, to an acceptable standard, repeatedly, and in a reasonable time</strong>. That&rsquo;s the reliability rule. It&rsquo;s the most-missed concept on the entire form.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <div class="problem-title">You don&rsquo;t want to sound like you&rsquo;re exaggerating</div>
+        <div class="problem-text">So you soften every answer. &ldquo;I manage.&rdquo; &ldquo;Most days.&rdquo; &ldquo;I get by.&rdquo; The assessor reads those words and writes &ldquo;client reports independent.&rdquo; Honest, plain language about a hard day isn&rsquo;t exaggeration. It&rsquo;s what the form is asking for.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <div class="problem-title">The telephone assessment catches you off-guard</div>
+        <div class="problem-text">In NI, most assessments are by Capita on the phone. You can&rsquo;t see the assessor&rsquo;s notes. They might ask &ldquo;how did you get here today?&rdquo; You say &ldquo;the bus was fine.&rdquo; That single sentence ends up as &ldquo;client travels independently using public transport&rdquo; in a report that decides your award.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">04</div>
+        <div class="problem-title">You don&rsquo;t know what an assessor is actually looking for</div>
+        <div class="problem-text">The form has 12 activities, each scored on descriptors from 0 to 12 points. Most people have never seen the descriptors. You&rsquo;re writing answers without knowing what the question is really asking. The Answer Bank shows the descriptors and an example answer for each one, in your own words, so you know what good evidence actually looks like.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE RELIABILITY RULE -->
+<section class="ni-specific" style="background:var(--navy2);">
+  <div class="container">
+    <div class="eyebrow">The one rule the form doesn&rsquo;t explain</div>
+    <h2 class="section-heading">The reliability <em>rule</em></h2>
+    <p class="section-lead">Every activity on the PIP form is judged by the same four words. If you remember nothing else from this page, remember these.</p>
+
+    <div class="reliability-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:32px 0;">
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;color:var(--amber);font-size:11px;letter-spacing:2px;margin-bottom:8px;">SAFELY</div>
+        <p style="font-size:16px;color:var(--mist);">Without risk of harm to yourself or anyone else. If you can shower but only when someone else is in the house, that isn&rsquo;t &ldquo;safely.&rdquo;</p>
+      </div>
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;color:var(--amber);font-size:11px;letter-spacing:2px;margin-bottom:8px;">TO AN ACCEPTABLE STANDARD</div>
+        <p style="font-size:16px;color:var(--mist);">The same standard a person without your condition would manage. Half-cooked food, half-washed body, half-done jobs &mdash; not acceptable.</p>
+      </div>
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;color:var(--amber);font-size:11px;letter-spacing:2px;margin-bottom:8px;">REPEATEDLY</div>
+        <p style="font-size:16px;color:var(--mist);">As often as needed. If preparing one meal exhausts you for the rest of the day, you can&rsquo;t do it repeatedly.</p>
+      </div>
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;color:var(--amber);font-size:11px;letter-spacing:2px;margin-bottom:8px;">IN A REASONABLE TIME</div>
+        <p style="font-size:16px;color:var(--mist);">No more than twice as long as someone without your condition. If a 20-minute task takes you 90 minutes, that&rsquo;s not a reasonable time.</p>
+      </div>
+    </div>
+
+    <p style="font-size:16px;color:var(--mist);line-height:1.7;">If you can&rsquo;t do an activity all four ways, you can&rsquo;t do it for PIP purposes. Most people fail the form by answering &ldquo;yes&rdquo; to the activity without checking the four words. The Answer Bank shows you how to write each example answer so the four words are visible in plain English.</p>
+  </div>
+</section>
+
+<!-- THREE MOMENTS -->
+<section class="problems" style="background:var(--ink);">
+  <div class="container">
+    <div class="eyebrow">Three moments people use this</div>
+    <h2 class="section-heading">First claim, review, or <em>Mandatory Reconsideration</em></h2>
+    <p class="section-lead">The Answer Bank works the same way at all three moments &mdash; because the descriptors don&rsquo;t change. Only the form you&rsquo;re writing into changes.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <div class="problem-title">First-time PIP application</div>
+        <div class="problem-text">You&rsquo;ve received the PIP2 form (&ldquo;How your disability affects you&rdquo;). 40 pages. The Answer Bank gives you 136 example answers, structured by activity, so you can read how a clear descriptor-aligned answer looks before you write your own.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <div class="problem-title">Review or change-of-circumstances form</div>
+        <div class="problem-text">Your existing PIP award is up for review (AR1) or your condition has changed. Same form, same descriptors. The Answer Bank covers how to describe deterioration without having to start from scratch.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <div class="problem-title">Mandatory Reconsideration after a wrong decision</div>
+        <div class="problem-text">You&rsquo;ve had your decision and the assessor&rsquo;s report doesn&rsquo;t match what you said. You have <strong>one calendar month</strong> from the decision letter to ask DfC for an MR. The Answer Bank covers what to ask for, what evidence to attach, and how to write the &ldquo;the report didn&rsquo;t reflect what I told the assessor&rdquo; explanation. If MR doesn&rsquo;t fix it, the next step is appeal to The Appeals Service (TAS) &mdash; the guide explains that route too.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL PULL -->
+<section class="testimonial-pull">
+  <div class="container">
+    <blockquote style="font-family:'Playfair Display',serif;font-size:clamp(20px,3.2vw,28px);font-weight:700;line-height:1.4;color:#fff;border-left:3px solid var(--amber);padding-left:24px;margin:0;">
+      &ldquo;I&rsquo;d filled in the PIP form three times before. Every time I tried to be honest, but I&rsquo;d describe a normal day, not a hard day. The Answer Bank made me realise I&rsquo;d been answering the wrong question.&rdquo;
+    </blockquote>
+    <div style="margin-top:16px;font-size:13px;color:var(--fog);font-family:'DM Mono',monospace;letter-spacing:2px;">&mdash; KAREN W. &middot; NORTHERN IRELAND</div>
+  </div>
+</section>
+
+<!-- WHY NI -->
+<section class="ni-specific">
+  <div class="container">
+    <div class="eyebrow">Why NI specificity matters</div>
+    <h2 class="section-heading">Most PIP guides are written <em>for England</em></h2>
+    <p class="section-lead">PIP in Northern Ireland is administered by the Department for Communities (DfC), not the DWP. The rules are similar, but the form, the assessor, and the language people use differ enough that generic guides miss the mark.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:32px 0;">
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:8px;">DfC, not DWP</strong>
+        <p style="font-size:16px;color:var(--mist);">The form, letterheads, and decision-making are all DfC. Mandatory reconsideration goes to DfC. Tribunals in NI are at the Appeals Service (TAS), not HMCTS.</p>
+      </div>
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:8px;">Capita telephone assessment</strong>
+        <p style="font-size:16px;color:var(--mist);">Most NI assessments are now done by phone with a Capita health professional. The Answer Bank covers what they tend to ask and how to keep your written answers consistent with what you say verbally.</p>
+      </div>
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:8px;">NI rates 2026/27</strong>
+        <p style="font-size:16px;color:var(--mist);">Daily Living Enhanced &pound;114.60 / Standard &pound;76.70. Mobility Enhanced &pound;80.00 / Standard &pound;30.30. Verified against GOV.UK.</p>
+      </div>
+      <div class="ni-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:8px;">HSC, not NHS</strong>
+        <p style="font-size:16px;color:var(--mist);">In NI, your health professionals are part of HSC trusts &mdash; Belfast Trust, Northern Trust, Western Trust and so on. The Answer Bank uses the right terminology for evidence references.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT — single featured card -->
+<section class="products" id="product">
+  <div class="container">
+    <div class="eyebrow">The product</div>
+    <h2 class="section-heading">The NI PIP <em>Answer Bank</em></h2>
+    <p class="section-lead">A 60-page PDF with 136 worked example answers &mdash; one for every PIP activity descriptor. Written for the DfC form, in plain English, with the reliability rule built into every example. Instant download. Yours to keep.</p>
+
+    <div class="product-grid" style="display:grid;grid-template-columns:1fr;gap:24px;max-width:680px;margin:0 auto;">
+      <div class="product-card featured">
+        <div class="product-tag" style="display:inline-block;background:var(--amber);color:var(--ink);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;padding:4px 10px;border-radius:4px;margin-bottom:16px;">NI PIP ANSWER BANK</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:8px;">136 worked answers. <em style="color:var(--amber);font-style:italic;">12 activities.</em></h3>
+        <p style="color:var(--mist);font-size:16px;line-height:1.7;margin-bottom:24px;">For everyone applying for PIP in Northern Ireland &mdash; whether you&rsquo;re filling in the form for the first time, preparing for a Capita telephone assessment, or considering a Mandatory Reconsideration.</p>
+
+        <div class="product-features" style="margin:24px 0;">
+          <div class="product-feature">136 example answers across all 12 PIP activities</div>
+          <div class="product-feature">Reliability rule explained for every answer</div>
+          <div class="product-feature">Full descriptor scoring table (0&ndash;12 points)</div>
+          <div class="product-feature">Capita telephone assessment preparation</div>
+          <div class="product-feature">DfC-specific evidence guidance (HSC trusts, GP letters, MAR sheets)</div>
+          <div class="product-feature">Common wording mistakes &amp; how to fix them</div>
+          <div class="product-feature">Mandatory Reconsideration: what to ask for, what to attach, how to challenge a wrong report</div>
+          <div class="product-feature">60 pages, instant PDF download, yours forever</div>
+        </div>
+
+        <div class="product-price" style="display:flex;align-items:baseline;gap:12px;margin:24px 0 16px;">
+          <span style="font-family:'Playfair Display',serif;font-size:42px;font-weight:800;color:var(--amber);">&pound;24.99</span>
+          <span style="font-size:13px;color:var(--fog);">one-time payment &middot; instant download</span>
+        </div>
+
+        <a href="https://nibenefitsnavigator.gumroad.com/l/NI-PIP-Answer-Bank" target="_blank" class="btn-primary" onclick="fbq('track','InitiateCheckout',{content_name:'NI PIP Answer Bank',value:24.99,currency:'GBP'});" style="width:100%;text-align:center;display:block;margin-top:8px;">Get the Answer Bank &rarr;</a>
+
+        <p style="font-size:12px;color:var(--fog);margin-top:14px;text-align:center;">Secure checkout via Gumroad &middot; PDF emailed instantly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="objections">
+  <div class="container">
+    <div class="eyebrow">Honest answers</div>
+    <h2 class="section-heading">Before you <em>decide</em></h2>
+
+    <div class="objections-grid" style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px;">
+      <div class="objection-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:10px;">&ldquo;Can&rsquo;t I just get this from Citizens Advice?&rdquo;</strong>
+        <p style="color:var(--mist);font-size:16px;line-height:1.7;">Yes &mdash; and you should, for free independent advice. <a href="https://www.citizensadvice.co.uk/about-us/northern-ireland/" target="_blank" style="color:var(--teal);">Citizens Advice NI</a>, <a href="https://www.lawcentreni.org" target="_blank" style="color:var(--teal);">Law Centre NI</a> (028 9024 4401) and <a href="https://www.adviceni.net" target="_blank" style="color:var(--teal);">Advice NI</a> (0800 915 4604) are the right starting points. The Answer Bank is what people use alongside that &mdash; a reference they can read in their own time, on their own screen, without booking an appointment two weeks out.</p>
+      </div>
+
+      <div class="objection-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:10px;">&ldquo;Will this guarantee I get the award?&rdquo;</strong>
+        <p style="color:var(--mist);font-size:16px;line-height:1.7;">No. Anyone who tells you a guide guarantees an award is selling you something they can&rsquo;t deliver. PIP awards depend on your condition, the evidence you provide, and the assessor&rsquo;s report. What the Answer Bank does is help you describe a hard day clearly, in language that maps onto the descriptors. The decision is still DfC&rsquo;s.</p>
+      </div>
+
+      <div class="objection-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:10px;">&ldquo;Is this the &lsquo;exact words&rsquo; to use?&rdquo;</strong>
+        <p style="color:var(--mist);font-size:16px;line-height:1.7;">No, and please don&rsquo;t copy answers verbatim. The Answer Bank is example answers &mdash; the language and structure that show what a clear, descriptor-aligned answer looks like. Your answers need to be true for you. Copying someone else&rsquo;s words is one of the fastest ways to fail a Capita assessment when the wording doesn&rsquo;t match the verbal call.</p>
+      </div>
+
+      <div class="objection-card" style="background:var(--panel);padding:24px;border-radius:12px;border:1px solid var(--border);">
+        <strong style="color:var(--amber);display:block;margin-bottom:10px;">&ldquo;What if I&rsquo;m past the form stage already?&rdquo;</strong>
+        <p style="color:var(--mist);font-size:16px;line-height:1.7;">If you&rsquo;ve had your decision and it&rsquo;s wrong, the Answer Bank covers Mandatory Reconsideration framing &mdash; what to ask for, what to attach, how to explain why the assessor&rsquo;s report didn&rsquo;t match what you said. That&rsquo;s a section in the back third of the guide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MR CALLOUT BAND -->
+<div class="mr-band">
+  <div class="mr-inner">
+    <div class="mr-content">
+      <div class="mr-eyebrow">If your claim was refused</div>
+      <h3 class="mr-heading">Refused doesn&rsquo;t mean <em>finished</em></h3>
+      <p class="mr-lead">A first refusal isn&rsquo;t the end of the road in NI. <strong>Mandatory Reconsideration</strong> is the next step &mdash; and many claims succeed there once the right wording is on paper. The Answer Bank covers the full MR process: what to ask for, what evidence to attach, and how to challenge a report that didn&rsquo;t reflect what you said.</p>
+    </div>
+    <a href="#product" class="btn-ghost mr-cta">See what&rsquo;s inside &rarr;</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="eyebrow">Questions answered</div>
+    <h2 class="section-heading">What NI claimants ask <em>most</em></h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this for new PIP applications or also reviews and reconsiderations? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Both. The 136 example answers work the same way whether you&rsquo;re applying for the first time, completing a review form, or writing a Mandatory Reconsideration letter. The descriptors don&rsquo;t change &mdash; only the form you&rsquo;re writing into.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does it cover mental health conditions? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. PIP in NI awards a high proportion of psychiatric / mental-health-led claims and the form&rsquo;s mental-health activities (Engaging with other people, Planning a journey, Reading and understanding signs &amp; symbols) get example answers covering anxiety, depression, autism, ADHD, PTSD, and bipolar.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does it cover physical conditions and chronic pain? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. The activities Preparing food, Washing &amp; bathing, Dressing &amp; undressing, Managing toilet needs, and Moving around all get example answers covering chronic pain, fatigue, mobility limitation, and conditions like fibromyalgia, ME/CFS, MS, arthritis, and post-surgical recovery.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What about good days vs bad days? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">If your condition fluctuates, the form scores you on whether you can do the activity reliably <strong>more than half the time</strong>. The Answer Bank explains how to describe a fluctuating condition without underselling your bad days &mdash; which is the most common mistake.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How is this different from the free PIP guide? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The free guide explains the three biggest wording mistakes and the reliability rule &mdash; about 12 pages. The Answer Bank is the full 60-page reference: 136 example answers across all 12 activities, descriptor scoring tables, evidence checklists, Capita assessment prep, and Mandatory Reconsideration framing. Most people read the free guide first to see if the approach makes sense, then get the Answer Bank if it does.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Will I get refunded if it&rsquo;s not what I expected? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. If the Answer Bank isn&rsquo;t what you expected, reply to the receipt email from Gumroad and we&rsquo;ll refund you. No questions, no forms, no awkward phone call.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this legal advice? <span class="icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">No. The Answer Bank is peer-written guidance to help you understand the NI PIP form and complete it using clear, descriptor-aligned language. For independent advice on your specific situation, contact <strong>Citizens Advice NI</strong>, the <strong>Law Centre NI</strong> (028 9024 4401), or <strong>Advice NI</strong> (0800 915 4604).</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="free-guide">
+  <h2 class="section-heading">Want to see the approach <em>first?</em></h2>
+  <p class="final-cta-lead">Download &ldquo;3 PIP Wording Mistakes NI Claimants Make&rdquo; &mdash; free, instant, no commitment. See the reliability rule explained before you decide on the full Answer Bank.</p>
+  <a href="https://nibenefitsnavigator.gumroad.com/l/NIBN_Free_PIP_Guide" target="_blank" class="btn-primary" onclick="fbq('track','Lead',{content_name:'Free PIP Guide - PIP AB Page'});">Download Free Now &rarr;</a>
+  <p style="margin-top:20px;font-size:13px;color:var(--fog);">Gumroad is free &mdash; just enter your email to download instantly. If it won&rsquo;t work, email <a href="mailto:nibenefitsnavigator@gmail.com" style="color:var(--teal);text-decoration:underline;">nibenefitsnavigator@gmail.com</a> and we&rsquo;ll send it directly.</p>
+  <p style="margin-top:30px;font-size:16px;color:var(--mist);">Already decided? <a href="https://nibenefitsnavigator.gumroad.com/l/NI-PIP-Answer-Bank" target="_blank" style="color:var(--amber);text-decoration:underline;" onclick="fbq('track','InitiateCheckout',{content_name:'NI PIP Answer Bank Footer',value:24.99,currency:'GBP'});">Get the full Answer Bank for &pound;24.99 &rarr;</a></p>
+</section>
+
+<!-- FREE ADVICE STRIP -->
+<section class="advice-strip">
+  <p>For free independent advice on your PIP claim, contact <a href="https://www.citizensadvice.co.uk/about-us/northern-ireland/" target="_blank">Citizens Advice NI</a>, <a href="https://www.lawcentreni.org" target="_blank">Law Centre NI</a> (028 9024 4401), or <a href="https://www.adviceni.net" target="_blank">Advice NI</a> (0800 915 4604).</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">NI Benefits Navigator</div>
+      <div class="footer-note">Northern Ireland &middot; DfC &middot; Peer support, not professional advice</div>
+    </div>
+    <div class="footer-legal">
+      Not legal or financial advice &middot; Informational guides only<br>
+      ICO Registration: C1903205<br>
+      &copy; 2026 NI Benefits Navigator
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.problem-card, .product-card, .ni-card, .objection-card, .faq-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
