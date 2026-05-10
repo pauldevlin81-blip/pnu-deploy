@@ -218,8 +218,14 @@ footer a { color: var(--teal); }
 
 /* ── Mobile ── */
 @media (max-width: 600px) {
-  .trust-strip .container { flex-direction: column; gap: 20px; align-items: center; }
-  .hero { padding: 40px 16px 36px; }
+  .trust-strip { flex-direction: column; gap: 24px; padding: 24px 16px; }
+  .trust-strip .container { flex-direction: column; gap: 24px; align-items: center; }
+  .trust-stat .num { font-size: 1.6rem; }
+  .trust-stat .label { font-size: 0.85rem; }
+  .hero { padding: 48px 20px; }
+  .hero h1 { font-size: 1.7rem; line-height: 1.25; }
+  .hero .subheadline { font-size: 1rem; }
+  .btn-primary { padding: 14px 28px; font-size: 1rem; width: calc(100% - 16px); max-width: 360px; }
   section { padding: 40px 16px; }
   .pricing-box { padding: 28px 20px; }
 }
