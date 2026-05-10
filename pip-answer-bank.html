@@ -1,27 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3;url=/">
-    <title>PIP Navigator UK — Page Being Rebuilt</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .container { text-align: center; padding: 2rem; max-width: 480px; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #003078; }
-        p { font-size: 1.2rem; color: #505a6e; margin-bottom: 1rem; line-height: 1.6; }
-        a { color: #003078; text-decoration: underline; }
-        a:hover { color: #001a45; }
-        .redirect-note { font-size: 0.9rem; color: #8a8a9e; margin-top: 1.5rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIP Answer Bank — How to write your PIP form when "I cope" isn't true</title>
+<meta name="description" content="All 12 PIP activities with every descriptor explained. Weak vs strong wording side by side, 30+ worked examples. England and Wales. £24.99 instant PDF.">
+<meta property="og:title" content="PIP Answer Bank — How to write your PIP form when 'I cope' isn't true">
+<meta property="og:description" content="All 12 PIP activities. Every descriptor. Weak vs strong wording with 30+ worked examples for real conditions. England and Wales only.">
+<style>
+:root {
+  --navy: #0F1432;
+  --navy-dark: #1A2050;
+  --amber: #D28C32;
+  --teal: #3CB4AA;
+  --salmon: #F07864;
+  --cream: #F5F1EC;
+  --mist: #B8C4D0;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy);
+  color: var(--cream);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: underline; }
+a:hover { color: var(--amber); }
+
+.container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+h1, h2, h3 { font-family: Georgia, serif; }
+h2 { color: var(--amber); font-size: clamp(24px, 5vw, 34px); margin-bottom: 16px; line-height: 1.25; }
+h3 { font-size: 20px; margin-bottom: 8px; color: #fff; }
+
+.btn-primary {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px 36px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(210,140,50,.4); color: var(--navy); }
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--cream);
+  font-family: Georgia, serif;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: 1px solid var(--mist);
+  text-decoration: none;
+  transition: border-color .2s, color .2s;
+}
+.btn-secondary:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ── Hero ── */
+.hero {
+  padding: 60px 20px 48px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.hero .subheadline {
+  font-size: 18px;
+  color: var(--mist);
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+/* ── Trust strip ── */
+.trust-strip {
+  background: var(--navy-dark);
+  padding: 28px 20px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.trust-strip .container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.trust-stat { max-width: 200px; }
+.trust-stat .num {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--teal);
+  display: block;
+}
+.trust-stat .label {
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.4;
+}
+
+/* ── Sections ── */
+section { padding: 56px 20px; }
+section + section { border-top: 1px solid rgba(255,255,255,.05); }
+
+ul.check-list { list-style: none; padding: 0; }
+ul.check-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  color: var(--cream);
+}
+ul.check-list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: bold;
+}
+
+/* ── EW Callout ── */
+.ew-callout {
+  border-left: 4px solid var(--teal);
+  background: rgba(60, 180, 170, .06);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.ew-callout strong { color: var(--teal); }
+
+/* ── Personas ── */
+.persona-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.persona-card .exclusion {
+  font-size: 14px;
+  color: var(--salmon);
+  margin-top: 8px;
+}
+
+/* ── Pricing ── */
+.pricing-box {
+  background: var(--navy-dark);
+  border: 2px solid var(--amber);
+  padding: 40px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.pricing-box .price {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--amber);
+  margin: 12px 0;
+}
+.pricing-box .details {
+  font-size: 15px;
+  color: var(--mist);
+  margin-bottom: 24px;
+}
+
+/* ── FAQ ── */
+.faq-item { margin-bottom: 28px; }
+.faq-item h3 { font-size: 18px; color: var(--amber); }
+.faq-item p { color: var(--mist); margin-top: 6px; }
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 40px 20px;
+  font-size: 14px;
+  color: var(--mist);
+  text-align: center;
+  line-height: 1.8;
+}
+footer a { color: var(--teal); }
+
+/* ── Cookie banner ── */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 16px 20px;
+  z-index: 9999;
+  display: none;
+  text-align: center;
+  font-size: 14px;
+}
+.cookie-banner.show { display: block; }
+.cookie-banner button {
+  background: var(--amber);
+  color: var(--navy);
+  border: none;
+  padding: 8px 20px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .trust-strip .container { flex-direction: column; gap: 20px; align-items: center; }
+  .hero { padding: 40px 16px 36px; }
+  section { padding: 40px 16px; }
+  .pricing-box { padding: 28px 20px; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>PIP Navigator UK</h1>
-        <p>This page is being rebuilt.</p>
-        <p>Get the free PIP guide here: <a href="https://nibenefitsnavigator.gumroad.com/l/free-uk-pip-guide">Download Free PIP Guide</a></p>
-        <p class="redirect-note">Redirecting to homepage in 3 seconds&hellip;</p>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="container">
+    <h1>How to write your PIP form when &ldquo;I cope&rdquo; isn&rsquo;t true</h1>
+    <p class="subheadline">All 12 PIP activities. Every descriptor. Weak vs strong wording &mdash; with 30+ worked examples for real conditions.</p>
+    <a href="https://nibenefitsnavigator.gumroad.com/l/uk-pip-answer-bank" class="btn-primary">Get the Answer Bank &mdash; &pound;24.99</a>
+  </div>
+</section>
+
+<!-- ═══════════════ TRUST STRIP ═══════════════ -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-stat">
+      <span class="num">3.93M</span>
+      <span class="label">PIP claimants in England &amp; Wales</span>
     </div>
+    <div class="trust-stat">
+      <span class="num">60.8%</span>
+      <span class="label">rejected at first decision</span>
+    </div>
+    <div class="trust-stat">
+      <span class="num">66%</span>
+      <span class="label">win at tribunal with representation</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PROBLEM DIAGNOSIS ═══════════════ -->
+<section>
+  <div class="container">
+    <h2>If this is you</h2>
+    <div class="persona-card">
+      <p>&ldquo;I&rsquo;ve been staring at the form for days. Every box I write sounds like I&rsquo;m coping fine &mdash; but I&rsquo;m not.&rdquo;</p>
+    </div>
+    <div class="persona-card">
+      <p>&ldquo;The assessment is next week and I don&rsquo;t know how to explain what my days actually look like without sounding like I&rsquo;m making it up.&rdquo;</p>
+    </div>
+    <div class="persona-card">
+      <p>&ldquo;I just got refused. Zero points. I know I should challenge it but I don&rsquo;t know where I went wrong.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT THIS HELPS WITH ═══════════════ -->
+<section>
+  <div class="container">
+    <h2>What this helps with</h2>
+    <ul class="check-list">
+      <li>Preparing food &mdash; describing what you actually can&rsquo;t do safely</li>
+      <li>Washing and bathing &mdash; explaining why &ldquo;I manage&rdquo; hides the real picture</li>
+      <li>Dressing and undressing &mdash; showing how pain, fatigue, or confusion slows you down</li>
+      <li>Managing therapy or monitoring a condition &mdash; beyond just &ldquo;I take my tablets&rdquo;</li>
+      <li>Following journeys &mdash; why familiar routes still cause difficulty</li>
+      <li>Engaging with other people &mdash; when social interaction takes real effort or causes distress</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════ E&W SPECIFICITY ═══════════════ -->
+<section>
+  <div class="container">
+    <h2>Why this is for England &amp; Wales only</h2>
+    <div class="ew-callout">
+      <p><strong>This guide covers DWP PIP in England and Wales only.</strong></p>
+      <p>Scotland now uses Adult Disability Payment (ADP) under Social Security Scotland &mdash; different forms, different rules, different descriptors. Northern Ireland uses PIP but administered by DfC, not DWP, with its own processes.</p>
+      <p>The wording patterns, assessment criteria, and mandatory reconsideration process in this guide are specific to the DWP system. If you live in Scotland or Northern Ireland, this is not written for your claim.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT YOU GET ═══════════════ -->
+<section>
+  <div class="container">
+    <h2>What you get</h2>
+    <ul class="check-list">
+      <li>All 12 PIP activities covered &mdash; daily living and mobility</li>
+      <li>Every descriptor explained in plain English</li>
+      <li>Weak vs strong wording shown side by side</li>
+      <li>30+ worked examples across real conditions (chronic pain, mental health, neurological, fatigue-based)</li>
+      <li>Evidence section &mdash; what to gather and how to present it</li>
+      <li>Assessment prep section &mdash; what assessors look for and how to stay consistent</li>
+      <li>Mandatory reconsideration section &mdash; how to challenge a decision that got it wrong</li>
+      <li>62 pages, instant PDF download</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════ WHO THIS IS FOR ═══════════════ -->
+<section>
+  <div class="container">
+    <h2>Who this is for</h2>
+    <div class="persona-card">
+      <h3>First-time PIP applicants</h3>
+      <p>You&rsquo;ve never filled in a PIP2 form before and you want to get it right first time, without accidentally underselling your difficulties.</p>
+      <p class="exclusion">Not for Scotland (ADP) or Northern Ireland (DfC PIP).</p>
+    </div>
+    <div class="persona-card">
+      <h3>People preparing for a reassessment</h3>
+      <p>Your award is ending or you&rsquo;ve been called for a review. You need to describe how things have stayed the same &mdash; or got worse.</p>
+      <p class="exclusion">Not for Scotland (ADP) or Northern Ireland (DfC PIP).</p>
+    </div>
+    <div class="persona-card">
+      <h3>People challenging a refusal</h3>
+      <p>You scored zero or too few points. You know the decision was wrong. You need to understand where your wording let you down and how to fix it for mandatory reconsideration.</p>
+      <p class="exclusion">Not for Scotland (ADP) or Northern Ireland (DfC PIP).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRICING ═══════════════ -->
+<section>
+  <div class="container">
+    <div class="pricing-box">
+      <h2 style="color:#fff;">PIP Answer Bank</h2>
+      <div class="price">&pound;24.99</div>
+      <div class="details">One-off payment. Instant PDF download. Lifetime access.</div>
+      <a href="https://nibenefitsnavigator.gumroad.com/l/uk-pip-answer-bank" class="btn-primary">Get the Answer Bank</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section>
+  <div class="container">
+    <h2>Common questions</h2>
+
+    <div class="faq-item">
+      <h3>Will this guarantee an award?</h3>
+      <p>No. Nobody can guarantee a PIP decision &mdash; it depends on your condition, your evidence, and the assessor. What this does is help you describe your difficulties in the language the DWP system is designed to recognise, so the form actually reflects your life.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if my condition isn&rsquo;t listed?</h3>
+      <p>The worked examples cover a range of conditions (chronic pain, depression, anxiety, MS, fibromyalgia, autism, ADHD, and more) &mdash; but the patterns are transferable. PIP is about what you can&rsquo;t do, not your diagnosis. You adapt the wording pattern to your situation.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is this for Scotland or Northern Ireland?</h3>
+      <p>No. Scotland now uses ADP (Adult Disability Payment) with different rules. Northern Ireland uses PIP but under DfC, not DWP. This guide covers England and Wales only &mdash; the forms, descriptors, and challenge process are specific to DWP.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if I&rsquo;ve already been refused?</h3>
+      <p>The mandatory reconsideration section is specifically for you. It covers how to identify where your form was scored incorrectly, what evidence to add, and how to structure the MR letter.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>I&rsquo;m not sure if I should buy yet.</h3>
+      <p>Start with the free guide. It explains the single most important rule that changes how you write every answer on your PIP form.</p>
+      <p style="margin-top: 12px;"><a href="https://nibenefitsnavigator.gumroad.com/l/free-uk-pip-guide" class="btn-secondary">Get the free guide: &ldquo;The One Rule That Changes Your Entire PIP Form&rdquo;</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section style="text-align: center;">
+  <div class="container">
+    <h2>Ready to write your PIP form properly?</h2>
+    <p style="color: var(--mist); margin-bottom: 28px;">62 pages. All 12 activities. The wording that shows assessors what your days actually look like.</p>
+    <a href="https://nibenefitsnavigator.gumroad.com/l/uk-pip-answer-bank" class="btn-primary">Get the Answer Bank &mdash; &pound;24.99</a>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="container">
+    <p>PIP Navigator UK is a peer-support resource. This is not professional benefits advice, legal advice, or medical evidence. If you need independent help with your claim, contact <a href="https://www.citizensadvice.org.uk/benefits/pip/" target="_blank" rel="noopener">Citizens Advice</a>.</p>
+    <p style="margin-top: 16px;">
+      <a href="/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="/cookies.html">Cookie Policy</a> &nbsp;&middot;&nbsp;
+      <a href="/terms.html">Terms</a>
+    </p>
+    <p style="margin-top: 12px; font-size: 12px; color: rgba(184,196,208,.6);">England &amp; Wales only. DWP PIP.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════ COOKIE CONSENT BANNER ═══════════════ -->
+<div class="cookie-banner" id="cookieBanner">
+  This site uses cookies to understand how visitors find us and to improve the experience.
+  <button onclick="acceptCookies()">Accept</button>
+  <button onclick="dismissCookies()" style="background:transparent;color:var(--mist);border:1px solid var(--mist);margin-left:8px;">Decline</button>
+</div>
+
+<script>
+// Cookie consent
+function acceptCookies() {
+  localStorage.setItem('pnu_cookies_accepted', 'true');
+  document.getElementById('cookieBanner').classList.remove('show');
+  loadTracking();
+}
+function dismissCookies() {
+  localStorage.setItem('pnu_cookies_accepted', 'false');
+  document.getElementById('cookieBanner').classList.remove('show');
+}
+(function() {
+  var consent = localStorage.getItem('pnu_cookies_accepted');
+  if (consent === null) {
+    document.getElementById('cookieBanner').classList.add('show');
+  } else if (consent === 'true') {
+    loadTracking();
+  }
+})();
+
+function loadTracking() {
+  // Meta Pixel
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '517991158551582');
+  fbq('track', 'PageView');
+
+  // PostHog — add project key when PNU PostHog project is created
+}
+
+// UTM capture
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+  utmKeys.forEach(function(key) {
+    var val = params.get(key);
+    if (val) sessionStorage.setItem(key, val);
+  });
+  // Append UTMs to Gumroad links
+  var links = document.querySelectorAll('a[href*="gumroad.com"]');
+  links.forEach(function(link) {
+    var url = new URL(link.href);
+    utmKeys.forEach(function(key) {
+      var stored = sessionStorage.getItem(key);
+      if (stored) url.searchParams.set(key, stored);
+    });
+    link.href = url.toString();
+  });
+})();
+</script>
+
+<!-- Meta Pixel noscript fallback -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=517991158551582&ev=PageView&noscript=1" alt=""></noscript>
+
 </body>
 </html>
