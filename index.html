@@ -1,22 +1,792 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIP Navigator UK</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .container { text-align: center; padding: 2rem; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #003078; }
-        p { font-size: 1.2rem; color: #505a6e; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIP Navigator — The Words That Score Points on Your PIP Form</title>
+  <meta name="description" content="60.8% of PIP claims are rejected. Not because people aren't disabled enough — because their wording isn't strong enough. PIP Navigator gives you the exact words that work.">
+  <meta property="og:title" content="PIP Navigator — Stop Describing a Good Day">
+  <meta property="og:description" content="The UK's PIP wording guide. Every activity. Every descriptor. The exact words that score points.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '517991158551582');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=517991158551582&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    :root {
+      --navy: #0F1432;
+      --navy-deep: #0A0E24;
+      --amber: #D28C32;
+      --amber-light: #E8A84C;
+      --teal: #3CB4AA;
+      --teal-light: #4DC9BF;
+      --salmon: #F07864;
+      --cream: #F5F0E6;
+      --grey: #C8CDDC;
+      --mist: #8A90A8;
+      --panel: #19234B;
+      --panel-border: #2A3466;
+      --glow-amber: rgba(210, 140, 50, 0.12);
+      --glow-teal: rgba(60, 180, 170, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+      background: var(--navy-deep);
+      color: var(--grey);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── ATMOSPHERE ── */
+    .glow-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 600px 600px at 15% 10%, rgba(210,140,50,0.08), transparent),
+        radial-gradient(ellipse 500px 500px at 85% 5%, rgba(60,180,170,0.06), transparent);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── HEADER / NAV ── */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(60,180,170,0.15);
+      position: sticky;
+      top: 0;
+      background: rgba(10,14,36,0.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      color: var(--teal);
+      letter-spacing: 0.3px;
+    }
+
+    .header-cta {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--amber);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .header-cta:hover {
+      background: var(--amber-light);
+      transform: translateY(-1px);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero-stat {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--salmon);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      padding: 6px 16px;
+      border: 1px solid rgba(240,120,100,0.3);
+      border-radius: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(32px, 6vw, 52px);
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 .amber { color: var(--amber); }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--grey);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: var(--amber);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(210,140,50,0.25);
+    }
+
+    .hero-cta:hover {
+      background: var(--amber-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(210,140,50,0.35);
+    }
+
+    .hero-cta-sub {
+      display: block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--mist);
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      padding: 32px 0;
+      border-top: 1px solid var(--panel-border);
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+    }
+
+    .trust-item {
+      font-size: 13px;
+      color: var(--mist);
+      white-space: nowrap;
+    }
+
+    .trust-item::before {
+      content: '✓ ';
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* ── PAIN SECTION ── */
+    .pain {
+      padding: 64px 0;
+    }
+
+    .pain-quote {
+      position: relative;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      background: var(--panel);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--cream);
+      line-height: 1.7;
+    }
+
+    .pain-source {
+      display: block;
+      margin-top: 8px;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--mist);
+    }
+
+    .pain-intro {
+      font-size: 16px;
+      color: var(--grey);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    /* ── STATS STRIP ── */
+    .stats {
+      padding: 48px 0;
+      border-top: 1px solid var(--panel-border);
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 36px;
+      color: var(--amber);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--mist);
+      line-height: 1.4;
+    }
+
+    /* ── SECTION HEADINGS ── */
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-heading {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(26px, 4vw, 36px);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--grey);
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+
+    /* ── PRODUCT SECTION ── */
+    .product {
+      padding: 64px 0;
+    }
+
+    .product-card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .product-card:hover {
+      border-color: rgba(210,140,50,0.4);
+    }
+
+    .product-badge {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-new { background: var(--teal); color: var(--navy); }
+    .badge-free { background: var(--salmon); color: #fff; }
+
+    .product-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .product-desc {
+      font-size: 15px;
+      color: var(--grey);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .product-features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .product-features li {
+      font-size: 14px;
+      color: var(--grey);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .product-features li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    .product-price {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 28px;
+      color: var(--amber);
+      margin-bottom: 4px;
+    }
+
+    .product-price-note {
+      font-size: 13px;
+      color: var(--mist);
+      margin-bottom: 20px;
+    }
+
+    .product-cta {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--amber);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .product-cta:hover {
+      background: var(--amber-light);
+      transform: translateY(-1px);
+    }
+
+    /* ── FRAMEWORK SECTION ── */
+    .framework {
+      padding: 64px 0;
+      border-top: 1px solid var(--panel-border);
+    }
+
+    .framework-example {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+
+    .framework-label-weak {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--salmon);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .framework-label-strong {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      margin-top: 20px;
+    }
+
+    .framework-text {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .framework-text.weak {
+      color: var(--salmon);
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+
+    .framework-text.strong {
+      color: var(--cream);
+    }
+
+    /* ── TIMMS SECTION ── */
+    .timms {
+      padding: 48px 0;
+      border-top: 1px solid var(--panel-border);
+    }
+
+    .timms-box {
+      background: linear-gradient(135deg, rgba(210,140,50,0.08), rgba(60,180,170,0.05));
+      border: 1px solid rgba(210,140,50,0.2);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .timms-box h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+
+    .timms-box p {
+      font-size: 15px;
+      color: var(--grey);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── FAQ ── */
+    .faq {
+      padding: 64px 0;
+      border-top: 1px solid var(--panel-border);
+    }
+
+    .faq-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .faq-q {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--grey);
+      line-height: 1.65;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--panel-border);
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 18px;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--mist);
+      margin-bottom: 16px;
+    }
+
+    .footer-legal {
+      font-size: 12px;
+      color: rgba(138,144,168,0.6);
+      line-height: 1.6;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 56px 0 40px; }
+      .hero-cta { padding: 14px 32px; font-size: 15px; }
+      .trust-items { flex-direction: column; align-items: center; gap: 8px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .product-card { padding: 28px 20px; }
+      .header-cta { padding: 8px 16px; font-size: 12px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>PIP Navigator UK</h1>
-        <p>Coming soon &mdash; pipnavigator.co.uk</p>
+
+  <div class="glow-overlay"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 84 92" xmlns="http://www.w3.org/2000/svg">
+          <path d="M42 4 L78 4 Q82 4 82 8 L82 52 Q82 72 60 82 Q42 92 42 92 Q42 92 24 82 Q2 72 2 52 L2 8 Q2 4 6 4 Z" fill="#0F1432" stroke="#3CB4AA" stroke-width="2.5"/>
+          <path d="M42 20 L48 38 L66 42 L48 46 L42 64 L36 46 L18 42 L36 38 Z" fill="#D28C32" opacity="0.95"/>
+          <circle cx="42" cy="42" r="4" fill="#0F1432"/>
+        </svg>
+        <span class="logo-text">PIP Navigator</span>
+      </a>
+      <a href="#free-guide" class="header-cta" onclick="fbq('track', 'InitiateCheckout');">Free Guide ↓</a>
     </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-stat">60.8% of PIP claims rejected — Jan 2026</span>
+      <h1>Stop describing <span class="amber">a good day.</span></h1>
+      <p class="hero-sub">The PIP form has 12 activities. Each one is scored using descriptors most people have never seen. The wrong words score zero. The right words get you the award you need.</p>
+      <a href="#product" class="hero-cta" onclick="fbq('track', 'InitiateCheckout');">See the Guides →</a>
+      <span class="hero-cta-sub">Instant PDF download · £24.99</span>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <span class="trust-item">All 12 PIP activities</span>
+        <span class="trust-item">DWP descriptor language</span>
+        <span class="trust-item">Weak vs strong wording</span>
+        <span class="trust-item">Instant PDF download</span>
+        <span class="trust-item">Written by a parent</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN QUOTES -->
+  <section class="pain">
+    <div class="container">
+      <p class="pain-intro">These are real people. Posting on Reddit. This month.</p>
+
+      <div class="pain-quote">
+        "It took me four years to even apply because I couldn't handle the paperwork."
+        <span class="pain-source">— r/DWPhelp</span>
+      </div>
+
+      <div class="pain-quote">
+        "I'm anxious about how to express my thoughts clearly and use the appropriate wording."
+        <span class="pain-source">— r/BenefitsAdviceUK</span>
+      </div>
+
+      <div class="pain-quote">
+        "I submitted 100 pieces of evidence — still denied."
+        <span class="pain-source">— r/DWPhelp</span>
+      </div>
+
+      <div class="pain-quote">
+        "We just have given up the fight because engaging with this system is dehumanising."
+        <span class="pain-source">— r/unitedkingdom</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number">3.93M</div>
+          <div class="stat-label">PIP claimants in the UK — record high</div>
+        </div>
+        <div>
+          <div class="stat-number">60.8%</div>
+          <div class="stat-label">New claims rejected (Jan 2026)</div>
+        </div>
+        <div>
+          <div class="stat-number">63%</div>
+          <div class="stat-label">Win at tribunal — most never get there</div>
+        </div>
+        <div>
+          <div class="stat-number">99K</div>
+          <div class="stat-label">Claimants stuck in the appeals backlog</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section class="framework">
+    <div class="container">
+      <div class="section-label">The shift</div>
+      <h2 class="section-heading">Same person. Same condition.<br>Different words.</h2>
+      <p class="section-sub">Most people describe the managed version of their life. The PIP form needs to see what happens without help.</p>
+
+      <div class="framework-example">
+        <div class="framework-label-weak">✗ What most people write</div>
+        <p class="framework-text weak">"I struggle with cooking and need help sometimes."</p>
+        <div class="framework-label-strong">✓ What scores points</div>
+        <p class="framework-text strong">"On most days I cannot safely use the cooker. I have left the hob on 3 times in the last month because I walked away mid-task. Without prompting, I would not eat a hot meal."</p>
+      </div>
+
+      <div class="framework-example">
+        <div class="framework-label-weak">✗ What most people write</div>
+        <p class="framework-text weak">"I need help getting dressed in the morning."</p>
+        <div class="framework-label-strong">✓ What scores points</div>
+        <p class="framework-text strong">"Without step-by-step prompting, I will not initiate dressing. I become overwhelmed by the sequence of tasks and remain in nightclothes. This has caused me to miss medical appointments on at least 3 occasions."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="product" id="product">
+    <div class="container">
+      <div class="section-label">Guides</div>
+      <h2 class="section-heading">The words that work.</h2>
+
+      <!-- UK PIP Answer Bank -->
+      <div class="product-card">
+        <span class="product-badge badge-new">UK-WIDE</span>
+        <h3 class="product-title">UK PIP Answer Bank</h3>
+        <p class="product-desc">Every activity. Every descriptor. Weak vs strong wording for all 12 PIP activities — with 30+ worked examples across autism, ADHD, anxiety, depression, chronic pain, epilepsy, and learning disability.</p>
+        <ul class="product-features">
+          <li>All 12 daily living and mobility activities</li>
+          <li>Weak vs strong wording — side by side</li>
+          <li>The "What If I Wasn't There?" framework</li>
+          <li>Condition-specific worked examples</li>
+          <li>Symptom diary, personal statement, GP brief templates</li>
+          <li>Assessment preparation checklist</li>
+        </ul>
+        <div class="product-price">£24.99</div>
+        <div class="product-price-note">Instant PDF download · 44 pages</div>
+        <a href="https://nibenefitsnavigator.gumroad.com/l/UK-PIP-Answer-Bank" class="product-cta" onclick="fbq('track', 'InitiateCheckout');">Download Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE GUIDE -->
+  <section class="product" id="free-guide" style="padding-top: 0;">
+    <div class="container">
+      <div class="product-card" style="border-color: rgba(240,120,100,0.3);">
+        <span class="product-badge badge-free">FREE</span>
+        <h3 class="product-title">3 Wording Mistakes That Weaken Most PIP Claims</h3>
+        <p class="product-desc">The 3 most common wording mistakes on PIP forms — with before-and-after examples showing exactly what to change. Free. No catch. Because nobody should fail PIP because of words they were never taught.</p>
+        <div class="product-price" style="color: var(--teal);">Free</div>
+        <div class="product-price-note">Instant PDF download · 10 pages</div>
+        <a href="https://nibenefitsnavigator.gumroad.com/l/Free-UK-PIP-Guide" class="product-cta" style="background: var(--teal); color: var(--navy);" onclick="fbq('track', 'Lead');">Download Free Guide →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMMS REVIEW -->
+  <section class="timms">
+    <div class="container">
+      <div class="timms-box">
+        <h3>The Timms Review is open now.</h3>
+        <p>The most significant review of PIP since its launch opened on 19 March 2026. The system is under scrutiny. But the form hasn't changed. Your wording is still the one thing you can control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label">Questions</div>
+      <h2 class="section-heading">Before you decide.</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Who wrote this?</div>
+        <p class="faq-a">A parent who has navigated PIP, mandatory reconsiderations, and appeals — and built this guide from everything they learned the hard way. No face. No name. Just the words that work.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is this legal advice?</div>
+        <p class="faq-a">No. This is peer support — guidance written from lived experience, not professional qualifications. If you need legal advice, speak to a welfare rights adviser or solicitor.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Which parts of the UK does this cover?</div>
+        <p class="faq-a">This guide covers the PIP system administered by the DWP across England and Wales. Scotland uses Adult Disability Payment (ADP) — a different system. Northern Ireland has its own PIP process. We have separate NI-specific guides available.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Will this guarantee I get PIP?</div>
+        <p class="faq-a">No. Nobody can guarantee that. But the difference between a weak answer and a strong answer on the same activity can be the difference between zero points and the points you need. This guide shows you that difference for all 12 activities.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I use this for mandatory reconsideration?</div>
+        <p class="faq-a">Yes. If you've been refused or scored too low, this guide helps you identify which activities were under-scored and how to rewrite your evidence using stronger, descriptor-aligned wording.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between this and the free guide?</div>
+        <p class="faq-a">The free guide covers 3 wording mistakes with examples. The UK PIP Answer Bank covers all 12 activities with full worked examples, the "What If I Wasn't There?" framework, condition-specific wording, and bonus templates for your symptom diary, personal statement, GP brief, and assessment prep.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if I've already submitted my form?</div>
+        <p class="faq-a">If you're waiting for a decision, keep this guide for your assessment preparation. If you've been refused, use it to strengthen your mandatory reconsideration. If you're due a review, use it to prepare for renewal. PIP is a cycle — this guide is relevant at every stage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="padding: 64px 0; text-align: center;">
+    <div class="container">
+      <h2 class="section-heading" style="max-width: 500px; margin: 0 auto 16px;">The system is hard.<br>Your wording doesn't have to be.</h2>
+      <p style="font-size: 16px; color: var(--grey); margin-bottom: 32px; max-width: 460px; margin-left: auto; margin-right: auto;">A PIP award at the enhanced rate is worth over £9,700 a year. This guide costs less than a single prescription.</p>
+      <a href="https://nibenefitsnavigator.gumroad.com/l/UK-PIP-Answer-Bank" class="hero-cta" onclick="fbq('track', 'InitiateCheckout');">£24.99 — Download Now →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">PIP Navigator</div>
+      <div class="footer-tagline">Built by a parent who's been through it.</div>
+      <p class="footer-legal">
+        Not legal or financial advice. Peer support only.<br>
+        PIP Navigator is not affiliated with the DWP, Citizens Advice, or any government body.<br>
+        © 2026 PIP Navigator. All rights reserved.
+      </p>
+      <p class="footer-legal">
+        <a href="/privacy-policy.html" style="color:inherit;">Privacy Policy</a> &middot;
+        <a href="/cookie-policy.html" style="color:inherit;">Cookie Policy</a>
+      </p>
+      <p class="footer-legal">
+        <a href="mailto:hello@pipnavigator.co.uk" style="color:inherit;">hello@pipnavigator.co.uk</a>
+      </p>
+    </div>
+  </footer>
+
+<script src="/cookie-consent-banner.js"></script>
 </body>
 </html>
-<!-- deploy test -->
