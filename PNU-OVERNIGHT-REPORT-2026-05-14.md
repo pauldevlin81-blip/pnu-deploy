@@ -184,4 +184,6 @@ The `pnu-deploy.netlify.app` site is git-linked to the same repo but serves stal
 
 ## SLEEP-TIGHT SUMMARY
 
-All three jobs diagnosed and actioned. The homepage restoration (Job 2) is committed on `overnight-d-scope-2026-05-13` and ready to merge — one `git merge` + `git push` gets the real homepage live for the first time since 13 April. The auto-deploy wiring (Job 1) has morning commands ready. The contamination audit (Job 3) came back clean. Paul needs ~10 minutes before 9am: merge, wire, push, verify.
+All three jobs diagnosed and actioned. The homepage restoration (Job 2) is committed on `overnight-d-scope-2026-05-13` and ready to merge — one `git merge` + `git push` gets the real homepage live for the first time since 13 April. The auto-deploy wiring (Job 1) has morning commands ready. The contamination audit (Job 3) came back clean.
+
+**Update 14 May 11:20 BST:** All morning jobs executed by Claude Code. Branch merged, Netlify wired via deploy key + build hook + GitHub webhook, homepage live.
