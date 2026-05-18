@@ -11,22 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
-
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '517991158551582');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=517991158551582&ev=PageView&noscript=1"/></noscript>
+  <link rel="canonical" href="https://pipnavigator.co.uk/">
 
   <style>
     :root {
@@ -563,7 +548,7 @@
         </svg>
         <span class="logo-text">PIP Navigator</span>
       </a>
-      <a href="#free-guide" class="header-cta" onclick="fbq('track', 'InitiateCheckout');">Free Guide ↓</a>
+      <a href="#free-guide" class="header-cta" onclick="typeof fbq==='function'&&fbq('track','InitiateCheckout');">Free Guide ↓</a>
     </div>
   </header>
 
@@ -573,7 +558,7 @@
       <span class="hero-stat">60.8% of PIP claims rejected — Jan 2026</span>
       <h1>Stop describing <span class="amber">a good day.</span></h1>
       <p class="hero-sub">The PIP form has 12 activities. Each one is scored using descriptors most people have never seen. The wrong words score zero. The right words get you the award you need.</p>
-      <a href="#product" class="hero-cta" onclick="fbq('track', 'InitiateCheckout');">See the Guides →</a>
+      <a href="#product" class="hero-cta" onclick="typeof fbq==='function'&&fbq('track','InitiateCheckout');">See the Guides →</a>
       <span class="hero-cta-sub">Instant PDF download · £24.99</span>
     </div>
   </section>
@@ -686,7 +671,7 @@
         </ul>
         <div class="product-price">£24.99</div>
         <div class="product-price-note">Instant PDF download · 44 pages</div>
-        <a href="https://nibenefitsnavigator.gumroad.com/l/UK-PIP-Answer-Bank" class="product-cta" onclick="fbq('track', 'InitiateCheckout');">Download Now →</a>
+        <a href="https://nibenefitsnavigator.gumroad.com/l/uk-pip-answer-bank" class="product-cta" onclick="typeof fbq==='function'&&fbq('track','InitiateCheckout');">Download Now →</a>
       </div>
     </div>
   </section>
@@ -700,7 +685,7 @@
         <p class="product-desc">The 3 most common wording mistakes on PIP forms — with before-and-after examples showing exactly what to change. Free. No catch. Because nobody should fail PIP because of words they were never taught.</p>
         <div class="product-price" style="color: var(--teal);">Free</div>
         <div class="product-price-note">Instant PDF download · 10 pages</div>
-        <a href="https://nibenefitsnavigator.gumroad.com/l/Free-UK-PIP-Guide" class="product-cta" style="background: var(--teal); color: var(--navy);" onclick="fbq('track', 'Lead');">Download Free Guide →</a>
+        <a href="https://nibenefitsnavigator.gumroad.com/l/free-uk-pip-guide" class="product-cta" style="background: var(--teal); color: var(--navy);" onclick="typeof fbq==='function'&&fbq('track','Lead');">Download Free Guide →</a>
       </div>
     </div>
   </section>
@@ -763,7 +748,7 @@
     <div class="container">
       <h2 class="section-heading" style="max-width: 500px; margin: 0 auto 16px;">The system is hard.<br>Your wording doesn't have to be.</h2>
       <p style="font-size: 16px; color: var(--grey); margin-bottom: 32px; max-width: 460px; margin-left: auto; margin-right: auto;">A PIP award at the enhanced rate is worth over £9,700 a year. This guide costs less than a single prescription.</p>
-      <a href="https://nibenefitsnavigator.gumroad.com/l/UK-PIP-Answer-Bank" class="hero-cta" onclick="fbq('track', 'InitiateCheckout');">£24.99 — Download Now →</a>
+      <a href="https://nibenefitsnavigator.gumroad.com/l/uk-pip-answer-bank" class="hero-cta" onclick="typeof fbq==='function'&&fbq('track','InitiateCheckout');">£24.99 — Download Now →</a>
     </div>
   </section>
 
@@ -779,7 +764,8 @@
       </p>
       <p class="footer-legal">
         <a href="/privacy-policy.html" style="color:inherit;">Privacy Policy</a> &middot;
-        <a href="/cookie-policy.html" style="color:inherit;">Cookie Policy</a>
+        <a href="/cookie-policy.html" style="color:inherit;">Cookie Policy</a> &middot;
+        <a href="/terms.html" style="color:inherit;">Terms</a>
       </p>
       <p class="footer-legal">
         <a href="mailto:hello@pipnavigator.co.uk" style="color:inherit;">hello@pipnavigator.co.uk</a>
@@ -787,6 +773,67 @@
     </div>
   </footer>
 
-<script src="/cookie-consent-banner.js"></script>
+<!-- Cookie consent banner -->
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1A2050;border-top:1px solid rgba(255,255,255,.1);padding:16px 20px;z-index:9999;display:none;text-align:center;font-family:'DM Sans',Arial,sans-serif;font-size:14px;color:#C8CDDC;">
+  This site uses cookies to understand how visitors find us and to improve the experience. <a href="/cookie-policy.html" style="color:#3CB4AA;">Learn more</a>.
+  <button onclick="acceptCookies()" style="background:#D28C32;color:#0F1432;border:none;padding:8px 20px;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-left:12px;border-radius:4px;">Accept</button>
+  <button onclick="dismissCookies()" style="background:transparent;color:#C8CDDC;border:1px solid #7A7F94;padding:8px 20px;font-family:'DM Sans',Arial,sans-serif;font-size:14px;cursor:pointer;margin-left:8px;border-radius:4px;">Decline</button>
+</div>
+
+<script>
+// Cookie consent
+function acceptCookies() {
+  localStorage.setItem('pnu_cookies_accepted', 'true');
+  document.getElementById('cookieBanner').style.display = 'none';
+  loadTracking();
+}
+function dismissCookies() {
+  localStorage.setItem('pnu_cookies_accepted', 'false');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+(function() {
+  var consent = localStorage.getItem('pnu_cookies_accepted');
+  if (consent === null) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  } else if (consent === 'true') {
+    loadTracking();
+  }
+})();
+
+function loadTracking() {
+  // Meta Pixel
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '517991158551582');
+  fbq('track', 'PageView');
+}
+
+// UTM capture
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+  utmKeys.forEach(function(key) {
+    var val = params.get(key);
+    if (val) sessionStorage.setItem(key, val);
+  });
+  // Append UTMs to Gumroad links
+  var links = document.querySelectorAll('a[href*="gumroad.com"]');
+  links.forEach(function(link) {
+    var url = new URL(link.href);
+    utmKeys.forEach(function(key) {
+      var stored = sessionStorage.getItem(key);
+      if (stored) url.searchParams.set(key, stored);
+    });
+    link.href = url.toString();
+  });
+})();
+</script>
+
+<!-- Meta Pixel noscript fallback (only fires if JS disabled — no consent gate possible) -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=517991158551582&ev=PageView&noscript=1" alt=""></noscript>
+
 </body>
 </html>
