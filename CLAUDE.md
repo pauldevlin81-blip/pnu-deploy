@@ -51,6 +51,7 @@ Market-level proof figures (use only these on LPs/content, never invented PNU-sp
 - 3.93M PIP claimants in England and Wales
 - PIP new-claim award rate: 35% awarded at first decision (normal rules, excl. withdrawn), qtr ending Jan 2026. Source: DWP PIP Official Statistics to Jan 2026, pub 17 Mar 2026, E&W. 65% not awarded at initial decision is PRE-MR/appeal — never state as flat 'rejected'. Next release 16 Jun 2026.
 - 66% win at tribunal with representation *(never 63%)*
+- PIP tribunal backlog: ~53,000 PIP appeals awaiting tribunal hearing, Q2 2025/26. Source: HMCTS tribunal statistics. '99K' is not a verified PIP figure — do not use. Appeal success rate ~68–72% (HMCTS); MR change rate ~22–25%.
 
 If a Scotland or NI rate appears in any generated copy, it's a bug — flag and correct.
 
