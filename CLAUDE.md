@@ -49,7 +49,7 @@ PIP rates 2026/27 (from GOV.UK):
 
 Market-level proof figures (use only these on LPs/content, never invented PNU-specific volume):
 - 3.93M PIP claimants in England and Wales
-- 60.8% rejected at first decision
+- PIP new-claim award rate: 35% awarded at first decision (normal rules, excl. withdrawn), qtr ending Jan 2026. Source: DWP PIP Official Statistics to Jan 2026, pub 17 Mar 2026, E&W. 65% not awarded at initial decision is PRE-MR/appeal — never state as flat 'rejected'. Next release 16 Jun 2026.
 - 66% win at tribunal with representation *(never 63%)*
 
 If a Scotland or NI rate appears in any generated copy, it's a bug — flag and correct.
