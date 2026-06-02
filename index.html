@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://pipnavigator.co.uk/">
+  <script src="/posthog-pnu.js" defer></script>
 
   <style>
     :root {
@@ -802,6 +803,10 @@ function dismissCookies() {
 })();
 
 function loadTracking() {
+  // PostHog opt-in on consent
+  if (window.posthog && typeof posthog.opt_in_capturing === 'function') {
+    posthog.opt_in_capturing();
+  }
   // Meta Pixel
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
