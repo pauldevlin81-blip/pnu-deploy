@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Us Help Others — PIP Navigator</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="/posthog-pnu.js" defer></script>
+<style>
+:root {
+  --navy: #0F1432;
+  --amber: #D28C32;
+  --teal: #3CB4AA;
+  --light-teal: #E8F6F4;
+  --white: #ffffff;
+  --grey: #666666;
+  --dark: #333333;
+  --light-bg: #F7F8FA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light-bg);
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--navy);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--amber);
+}
+
+.header h1 {
+  font-family: 'DM Serif Display', serif;
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--teal);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 580px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.intro {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--teal);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.intro p {
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.intro .time {
+  display: inline-block;
+  background: var(--light-teal);
+  color: var(--teal);
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+form {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group > label {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(60, 180, 170, 0.15);
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.form-group .radio-group {
+  display: flex;
+  gap: 12px;
+}
+
+.form-group .radio-option {
+  flex: 1;
+  position: relative;
+}
+
+.form-group .radio-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.form-group .radio-option label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  color: var(--dark);
+}
+
+.form-group .radio-option input:checked + label {
+  border-color: var(--teal);
+  background: var(--light-teal);
+  color: var(--navy);
+}
+
+.form-group .radio-option label:hover {
+  border-color: var(--teal);
+}
+
+.question-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--amber);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.other-field {
+  margin-top: 8px;
+  display: none;
+}
+
+.other-field.visible {
+  display: block;
+}
+
+.consent {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--light-bg);
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+}
+
+.consent p {
+  color: var(--grey);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--amber);
+  color: var(--navy);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background: #C07A28;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(210, 140, 50, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.thank-you {
+  display: none;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.thank-you.active {
+  display: block;
+}
+
+.thank-you h2 {
+  font-family: 'DM Serif Display', serif;
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you p {
+  color: var(--dark);
+  line-height: 1.6;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.thank-you .check {
+  width: 80px;
+  height: 80px;
+  background: var(--light-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+  color: var(--teal);
+}
+
+.msg-error {
+  display: none;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.msg-error.active {
+  display: block;
+}
+
+.msg-error p {
+  color: #dc2626;
+  font-size: 0.95rem;
+}
+
+.msg-error a {
+  color: var(--teal);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--grey);
+  font-size: 0.82rem;
+}
+
+.footer a { color: var(--teal); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Help Us Help Others</h1>
+  <p>Your answers help us build better guides for people going through PIP.</p>
+</div>
+
+<div class="container">
+
+  <div class="intro" id="introBlock">
+    <p>We'd love to know about your PIP experience so we can keep improving our guides for people who need them most.</p>
+    <span class="time">Takes about 60 seconds</span>
+  </div>
+
+  <form id="outcomes-form">
+
+    <div class="form-group">
+      <label><span class="question-number">1</span> What is your primary condition?</label>
+      <select name="condition" required id="condition-select">
+        <option value="" disabled selected>Select your condition...</option>
+        <option value="ADHD">ADHD</option>
+        <option value="Autism">Autism / ASD</option>
+        <option value="Anxiety">Anxiety</option>
+        <option value="Depression">Depression</option>
+        <option value="Chronic Pain">Chronic Pain</option>
+        <option value="Fibromyalgia">Fibromyalgia</option>
+        <option value="ME/CFS">ME / CFS</option>
+        <option value="EDS">EDS / Hypermobility</option>
+        <option value="PTSD">PTSD</option>
+        <option value="Learning Disability">Learning Disability</option>
+        <option value="MS">Multiple Sclerosis</option>
+        <option value="Dyspraxia">Dyspraxia / DCD</option>
+        <option value="Bipolar">Bipolar Disorder</option>
+        <option value="Arthritis">Arthritis</option>
+        <option value="COPD">COPD</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="other-field" id="other-condition">
+        <input type="text" name="condition_other" placeholder="Please specify your condition...">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label><span class="question-number">2</span> What type of PIP claim are you making?</label>
+      <select name="claim_type" required>
+        <option value="" disabled selected>Select claim type...</option>
+        <option value="New claim">New claim</option>
+        <option value="Review/Renewal">Review / Renewal</option>
+        <option value="Mandatory Reconsideration">Mandatory Reconsideration</option>
+        <option value="Tribunal Appeal">Tribunal Appeal</option>
+        <option value="DLA to PIP transition">DLA to PIP transition</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label><span class="question-number">3</span> How was your claim assessed?</label>
+      <select name="assessment_type">
+        <option value="" disabled selected>Select assessment type...</option>
+        <option value="Telephone">Telephone</option>
+        <option value="Video call">Video call</option>
+        <option value="Face-to-face">Face-to-face</option>
+        <option value="Paper-based">Paper-based</option>
+        <option value="Waiting">Waiting for assessment</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label><span class="question-number">4</span> What was the outcome?</label>
+      <select name="outcome" required>
+        <option value="" disabled selected>Select outcome...</option>
+        <option value="Enhanced both">Enhanced rate — both components</option>
+        <option value="Enhanced DL + Standard Mob">Enhanced daily living + standard mobility</option>
+        <option value="Standard both">Standard rate — both components</option>
+        <option value="Standard DL only">Standard daily living only</option>
+        <option value="Standard Mob only">Standard mobility only</option>
+        <option value="Awarded lower">Awarded but lower than expected</option>
+        <option value="Refused - planning MR">Refused — planning MR</option>
+        <option value="Refused - planning appeal">Refused — planning appeal</option>
+        <option value="Waiting">Still waiting for decision</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label><span class="question-number">5</span> Did you use the PIP Navigator Answer Bank?</label>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" name="used_product" id="used-yes" value="Yes" required>
+          <label for="used-yes">Yes</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="used_product" id="used-no" value="No">
+          <label for="used-no">No</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="used_product" id="used-partly" value="Partly">
+          <label for="used-partly">Partly</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Anything else you'd like to share? <span style="font-weight:400;color:#999;font-size:0.82rem;">(optional)</span></label>
+      <textarea name="notes" maxlength="500" placeholder="e.g. The physical conditions section helped me describe my pain on bad days."></textarea>
+    </div>
+
+    <div class="consent">
+      <p>By submitting this form, you consent to PIP Navigator using your anonymised responses to improve our products and publish aggregated outcome data. No personally identifiable information is stored. Contact hello@pipnavigator.co.uk to request deletion.</p>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submitBtn">Submit — Help Others Like You</button>
+  </form>
+
+  <div class="thank-you" id="thank-you">
+    <div class="check">&#10003;</div>
+    <h2>Thank you.</h2>
+    <p>Your response helps us build better guides for people who need them. Every answer makes the next version stronger.</p>
+    <p style="margin-top: 1rem; color: var(--grey); font-size: 0.9rem;">If you ever need anything, we're at hello@pipnavigator.co.uk</p>
+  </div>
+
+  <div class="msg-error" id="errorMsg">
+    <p>Something went wrong — please try again or email <a href="mailto:hello@pipnavigator.co.uk">hello@pipnavigator.co.uk</a></p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p><strong>PIP Navigator</strong><br>
+  <a href="https://pipnavigator.co.uk">pipnavigator.co.uk</a><br>
+  Peer support, not professional advice. England and Wales only.</p>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var SUBMIT_URL = '/.netlify/functions/submit-outcome';
+
+  document.getElementById('condition-select').addEventListener('change', function () {
+    var otherField = document.getElementById('other-condition');
+    if (this.value === 'Other') {
+      otherField.classList.add('visible');
+    } else {
+      otherField.classList.remove('visible');
+    }
+  });
+
+  document.getElementById('outcomes-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Saving\u2026';
+
+    var conditionSelect = document.getElementById('condition-select');
+    var conditionValue = conditionSelect.value;
+    if (conditionValue === 'Other') {
+      var otherInput = document.querySelector('input[name="condition_other"]');
+      if (otherInput && otherInput.value.trim()) {
+        conditionValue = otherInput.value.trim();
+      }
+    }
+
+    var usedProduct = '';
+    var usedRadios = document.querySelectorAll('input[name="used_product"]');
+    for (var i = 0; i < usedRadios.length; i++) {
+      if (usedRadios[i].checked) { usedProduct = usedRadios[i].value; break; }
+    }
+
+    var product = 'UK PIP Answer Bank';
+    if (usedProduct === 'No') { product = 'None'; }
+
+    var payload = {
+      brand:              'pnu',
+      product:            product,
+      condition_category: conditionValue,
+      claim_stage:        document.querySelector('select[name="claim_type"]').value,
+      outcome_type:       document.querySelector('select[name="outcome"]').value,
+      consent_confirmed:  true,
+      source_url:         window.location.href,
+      utm_source:         sessionStorage.getItem('utm_source') || '',
+      utm_medium:         sessionStorage.getItem('utm_medium') || '',
+      utm_campaign:       sessionStorage.getItem('utm_campaign') || ''
+    };
+
+    var notesEl = document.querySelector('textarea[name="notes"]');
+    if (notesEl && notesEl.value.trim()) {
+      payload.notes = notesEl.value.trim();
+    }
+
+    fetch(SUBMIT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      document.getElementById('outcomes-form').style.display = 'none';
+      document.getElementById('introBlock').style.display = 'none';
+      document.getElementById('thank-you').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Submit — Help Others Like You';
+      document.getElementById('outcomes-form').style.display = 'none';
+      document.getElementById('errorMsg').classList.add('active');
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
