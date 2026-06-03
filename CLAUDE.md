@@ -83,6 +83,64 @@ If a Scotland or NI rate appears in any generated copy, it's a bug — flag and 
 
 ---
 
+## Implementation standard
+
+Do not use any paid third-party libraries, services, SDKs, frameworks, or dependencies unless they are already present in the project.
+
+Output must be implementation-complete.
+
+For every build:
+
+1. Show the complete file tree.
+2. Show every new file in full.
+3. Show every modified file in full.
+4. Never provide partial snippets.
+5. Never use placeholders such as:
+   - TODO
+   - INSERT HERE
+   - YOUR CODE HERE
+   - pseudo-code
+6. Never assume I know where code belongs.
+7. Never assume I know how to deploy.
+8. Never assume I will debug manually.
+
+Provide:
+
+- exact file paths
+- exact code
+- exact environment variables
+- exact Netlify settings
+- exact Supabase settings
+- exact Git commands
+- exact terminal commands
+- exact deployment commands
+- exact verification procedure
+
+If a build depends on secrets or credentials:
+
+- stop at the precise blocker
+- identify the missing credential
+- explain exactly where I obtain it
+- explain exactly where I paste it
+
+Do not guess credentials.
+
+All output must be production-ready and capable of first-time deployment by a non-developer operator.
+
+Before presenting the solution, perform an adversarial review and identify:
+
+- broken assumptions
+- missing dependencies
+- deployment risks
+- security risks
+- failure points
+
+Then revise the implementation to remove those risks.
+
+Your objective is not to produce code. Your objective is to produce a build that works first time with minimal operator intervention.
+
+---
+
 ## Brand colours — PNU
 
 - Navy: `#0F1432` (primary background)
