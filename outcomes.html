@@ -416,8 +416,15 @@ form {
       <textarea name="notes" maxlength="500" placeholder="e.g. The physical conditions section helped me describe my pain on bad days."></textarea>
     </div>
 
-    <div class="consent">
-      <p>By submitting this form, you consent to PIP Navigator using your anonymised responses to improve our products and publish aggregated outcome data. No personally identifiable information is stored. Contact hello@pipnavigator.co.uk to request deletion.</p>
+    <div class="consent" style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;" onclick="var b=document.getElementById('consentProcessing');b.checked=!b.checked;">
+      <input type="checkbox" id="consentProcessing" name="consent_confirmed" value="true" required onclick="event.stopPropagation()" style="width:20px;height:20px;min-width:20px;accent-color:var(--teal);cursor:pointer;margin-top:2px;" />
+      <p style="font-size:0.84rem;">I agree that PIP Navigator UK can store the information I've entered here — including my benefit type, claim stage and outcome — to understand how people get on and improve its guidance. I understand this relates to my health or disability, that taking part is optional, and that I can ask for it to be deleted at any time. 🧭</p>
+    </div>
+    <input type="hidden" name="consent_wording_version" value="outcomes-consent-v1-2026-06-04" />
+
+    <div class="consent" style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;margin-top:0.75rem;" onclick="var b=document.getElementById('consentTestimonial');b.checked=!b.checked;">
+      <input type="checkbox" id="consentTestimonial" onclick="event.stopPropagation()" style="width:20px;height:20px;min-width:20px;accent-color:var(--teal);cursor:pointer;margin-top:2px;" />
+      <p style="font-size:0.78rem;">I'm happy for PIP Navigator UK to share my experience anonymously as peer support</p>
     </div>
 
     <button type="submit" class="submit-btn" id="submitBtn">Submit — Help Others Like You</button>
@@ -488,7 +495,9 @@ form {
       condition_category: conditionValue,
       claim_stage:        document.querySelector('select[name="claim_type"]').value,
       outcome_type:       document.querySelector('select[name="outcome"]').value,
-      consent_confirmed:  true,
+      consent_confirmed:  document.getElementById('consentProcessing').checked,
+      consent_wording_version: 'outcomes-consent-v1-2026-06-04',
+      testimonial_consent: document.getElementById('consentTestimonial').checked,
       source_url:         window.location.href,
       utm_source:         sessionStorage.getItem('utm_source') || '',
       utm_medium:         sessionStorage.getItem('utm_medium') || '',

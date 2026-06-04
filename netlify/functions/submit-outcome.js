@@ -27,6 +27,10 @@ exports.handler = async function (event) {
     return { statusCode: 400, headers: CORS_HEADERS, body: JSON.stringify({ error: 'Missing required field: outcome_type' }) };
   }
 
+  if (!body.consent_confirmed) {
+    return { statusCode: 400, headers: CORS_HEADERS, body: JSON.stringify({ error: 'Explicit consent is required to submit outcomes data' }) };
+  }
+
   var SUPABASE_URL = process.env.SUPABASE_URL;
   var SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
@@ -48,7 +52,9 @@ exports.handler = async function (event) {
     utm_source:         body.utm_source || null,
     utm_medium:         body.utm_medium || null,
     utm_campaign:       body.utm_campaign || null,
-    consent_confirmed:  !!body.consent_confirmed
+    consent_confirmed:  !!body.consent_confirmed,
+    consent_timestamp:  new Date().toISOString(),
+    consent_wording_version: body.consent_wording_version || null
   };
 
   var log = { fn: 'submit-outcome-pnu', ts: new Date().toISOString() };
